@@ -8,17 +8,19 @@ const Carousel = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPage] = useState(0);
     const [people, setPeople] = useState([]);
-    let carousel = useRef();
+    const carousel = useRef(null);
 
     const goLeft = () => (currentPage === 1 ? console.log('end') : setCurrentPage(currentPage - 1));
 
     const goRight = () => (currentPage === totalPages - 1 ? console.log('end') : setCurrentPage(currentPage + 1));
 
     const shiftCarousel = (currentPage) => {
-        let carouselItemWidth = carousel.current.firstChild.getBoundingClientRect().width;
-        carousel.current.style.transform = `translate3d(calc(${-(carouselItemWidth * 2) * currentPage}px - ${
-            4 * currentPage
-        }rem), 0, 0`;
+        if (carousel && carousel.current) {
+            let carouselItemWidth = carousel.current.firstChild.getBoundingClientRect().width;
+            carousel.current.style.transform = `translate3d(calc(${-(carouselItemWidth * 2) * currentPage}px - ${
+                4 * currentPage
+            }rem), 0, 0`;
+        }
     };
 
     useEffect(() => {

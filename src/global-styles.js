@@ -35,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
         -ms-text-size-adjust: 100%;
         position: relative;
         overflow: hidden;
+        color: #1d1d1d
         /* cursor: none; */
     }
 
@@ -42,6 +43,10 @@ const GlobalStyles = createGlobalStyle`
         width: 100%;
         max-width: 1280px;
         margin: 0 auto;
+    }
+
+    a, button, input {
+        font-family: 'archiaregular';
     }
 `;
 

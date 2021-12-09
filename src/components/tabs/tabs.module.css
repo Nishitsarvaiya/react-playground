@@ -1,0 +1,53 @@
+.TabsContainer {
+    width: 100%;
+}
+
+.TabsNav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.TabsNav li {
+    margin: 0 1.25rem;
+}
+
+.TabsNav li button {
+    border: none;
+    background: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.TabsNav li button::after {
+    content: '';
+    background: #1d1d1d;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 500ms ease;
+}
+
+.TabsNav li button:hover::after {
+    width: 60%;
+}
+
+.TabsNav li button.active::after {
+    width: 100%;
+}
+
+.TabsNav li button span {
+    font-size: 1rem;
+    transition: 500ms ease;
+}
+
+.TabsNav li button:hover span {
+    -webkit-text-stroke: 0.4px #1d1d1d;
+}
+
+.TabsNav li button.active span {
+    -webkit-text-stroke: 0.4px #1d1d1d;
+}
