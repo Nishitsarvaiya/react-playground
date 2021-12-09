@@ -1,0 +1,42 @@
+.CarouselContainer {
+    width: 100%;
+}
+
+.Carousel {
+    width: 100%;
+    display: flex;
+    margin-bottom: 3rem;
+    transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.CarouselItem {
+    width: calc((100% / 4) - 1.5rem);
+    flex-shrink: 0;
+    margin-right: 2rem;
+}
+
+.CarouselNav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.CarouselNav button {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 9px;
+    transition: 250ms ease-in-out;
+}
+
+.CarouselNav button img {
+    width: 24px;
+    height: 24px;
+    filter: contrast(0.3);
+}
+
+.CarouselNav button:hover {
+    border: 1px solid #40404050;
+}
